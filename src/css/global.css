@@ -1,0 +1,26 @@
+/*@import "pages/404";*/
+
+.page-home {
+  min-height: 100vh;
+  background: mediumseagreen;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 50px;
+  padding: 20px;
+  /*img{*/
+  /*  max-width: 100%;*/
+  /*  width: 350px;*/
+  /*  height: auto;*/
+  /*}*/
+  h1 {
+    font-size: 80px;
+    color: #fed1a1;
+    user-select: none;
+  }
+  /*p{*/
+  /*  color: white;*/
+  /*}*/
+}
