@@ -121,10 +121,10 @@ function wv_load_style($style_name)
             null
         );
     } else {
-        $manifest = json_decode(file_get_contents(get_template_directory() . "/dist/js/manifest.json"), true);
+        $manifest = json_decode(file_get_contents(get_template_directory() . "/dist/assets/manifest.json"), true);
         wp_enqueue_style(
             $style_name,
-            get_template_directory_uri() . "/dist/" . $manifest["js/" . $style_name . ".js"]["css"][0],
+            get_template_directory_uri() . "/dist/" . $manifest["assets/" . $style_name . ".js"]["css"][0],
             array(),
             null
         );
@@ -161,12 +161,12 @@ function wv_load_script($chunk_name)
 
     } else {
 
-        $manifest = json_decode(file_get_contents(get_template_directory() . "/dist/js/manifest.json"), true);
+        $manifest = json_decode(file_get_contents(get_template_directory() . "/dist/assets/manifest.json"), true);
 
         // modern bundle
         wp_enqueue_script(
             'modern-' . $chunk_name,
-            get_template_directory_uri() . "/dist/js/" . $manifest["js/" . $chunk_name . ".js"]["file"],
+            get_template_directory_uri() . "/dist/assets/" . $manifest["js/" . $chunk_name . ".js"]["file"],
             null,
             null,
             true
@@ -178,7 +178,7 @@ function wv_load_script($chunk_name)
             foreach ($css as $key => $value) {
                 wp_enqueue_style(
                     $chunk_name . '-' . $key,
-                    get_template_directory_uri() . "/dist/js/" . $value,
+                    get_template_directory_uri() . "/dist/assets/" . $value,
                     array(),
                     null
                 );

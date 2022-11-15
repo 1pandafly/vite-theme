@@ -1,11 +1,10 @@
-import '../css/vendor.css'
-import '../css/global.css'
+import '../css/global.css';
+import '../css/test.scss';
 
-console.log(1)
+console.log('global')
+
 
 // hmr
-// if (import.meta.hot) {
-//   import.meta.hot.accept()
-// }
-
-console.log(2)
+if (import.meta.hot) {
+  import.meta.hot.accept()
+}

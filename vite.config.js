@@ -1,15 +1,21 @@
-import liveReload from 'vite-plugin-live-reload'
-const { resolve } = require('path')
+import liveReload from 'vite-plugin-live-reload';
+import autoprefixer from "autoprefixer";
+const { resolve } = require('path');
 
 export default {
   root: 'src',
   base: './',
   publicDir: 'dist',
-
   plugins: [
     liveReload(__dirname+'/**/*.php')
   ],
-
+  css: {
+    postcss: {
+      plugins: [
+        autoprefixer()
+      ],
+    }
+  },
   build: {
     outDir: resolve(__dirname, 'dist/'),
     emptyOutDir: false,
@@ -20,10 +26,9 @@ export default {
         global: resolve(__dirname, 'src/js/global.js'),
         homepage: resolve(__dirname, 'src/js/homepage.js'),
         blog: resolve(__dirname, 'src/js/blog.js'),
-        test: resolve(__dirname, 'src/js/test.js'),
       },
       output: {
-        dir: 'dist/js'
+        dir: 'dist/assets'
       }
     }
   },

@@ -31,10 +31,6 @@ npm run prod:images
 # Run vite build
 npm run prod:vite
 
-# Zip theme
-npm run zip
-
-
 ```
 </details>
 
@@ -45,7 +41,6 @@ npm run zip
 🔩 Convert theme images to .webp<br>
 💄 PostCSS w/ nesting and imports<br>
 📑 Remove WP scripts and emoji tags<br>
-🥞 THEMEPATH and AJAX_URL variables<br>
 🍬 Classic Wordpress theme structure (no weird stuff)<br>
 
 ### Guide
@@ -57,17 +52,13 @@ npm run zip
   <summary>How does the image optimization works?</summary>
   While in watching mode, every image you put into "src/img" folder gets an optimized version in "assets/img" also a WEBP version is created, you can add it in the theme by using the wv_img PHP function
 </details>
-<details>
-  <summary>How does url() works in css</summary>
-  CSS urls points to assets folder
-</details>
 
 
 ### Scaffolding
 
 ```
 wordvite/
-├── assets/              // public assets (like fonts) and output of processed assets
+├── dist/              // public assets (like fonts) and output of processed assets
 │   ├── img/             // output of optimized images
 │   ├── js/              // output of builded vite files (js and css)
 ├── core/ 
