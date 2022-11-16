@@ -44,30 +44,7 @@ if (IS_WATCH) {
   walkDir(SRC_FOLDER, function (filePath) {
     optimizeImage(filePath)
   });
-
-
-
 }
-
-
-// function processFolder(folder) {
-
-//   fs.readdir(folder, (err, files) => {
-//     // console.log(files);
-//     files.forEach(file => {
-//       if (!fs.statSync(folder + '/' + file).isDirectory()) {
-
-//         optimizeImage(folder + file);
-//         // console.log(file);
-//       } else {
-//         processFolder(file)
-//         // console.log(file)
-
-//       }
-//     });
-//   });
-// }
-
 
 function walkDir(dir, callback) {
   fs.readdirSync(dir).forEach(f => {
@@ -78,10 +55,6 @@ function walkDir(dir, callback) {
   });
 };
 
-
-
-
-
 function removeFolder(path) {
 
   var mirror_folder = path.replace('src', 'assets')
@@ -90,8 +63,6 @@ function removeFolder(path) {
     fs.rmdirSync(mirror_folder, { recursive: true })
   }
 }
-
-
 
 function optimizeImage(path) {
 
@@ -139,7 +110,6 @@ function optimizeImage(path) {
 
 
 }
-
 
 function removeImage(path) {
 

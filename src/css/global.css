@@ -1,4 +1,7 @@
+@import "base/_fonts.scss";
+
 .site-main {
+  font-family: 'Inter', sans-serif!important;
   /*min-height: 100vh;*/
   background: grey;
   text-align: center;

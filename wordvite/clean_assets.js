@@ -24,6 +24,19 @@ if (fs.existsSync('./dist/js')) {
   });
 }
 
+if (fs.existsSync('./dist/fonts')) {
+  fs.readdir('./dist/fonts', (err, files) => {
+    if (err) console.log(err);
+    for (const file of files) {
+      if (file != "img") {
+        fs.unlink(path.join('./dist/fonts', file), err => {
+          if (err) console.log(err);
+        });
+      }
+    }
+  });
+}
+
 // remove watch file
 if (fs.existsSync('./dist/watch')) {
   fs.unlink(path.join('./dist/', 'watch'), err => {
