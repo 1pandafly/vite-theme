@@ -46,7 +46,7 @@ npm run prod:vite
 ### Guide
 <details>
   <summary>How to add a new page script?</summary>
-  Create a .js file in src/js, then enqueue it conditionally in functions.php using the wv_load_script(JS_NAME) function
+  Create a .js file in src/js, then add it ot vite.config.js to input options and finally enqueue it conditionally in functions.php using the wv_load_script(JS_NAME) function
 </details>
 <details>
   <summary>How does the image optimization works?</summary>

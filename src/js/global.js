@@ -1,5 +1,4 @@
 import '../css/global.css';
-import '../css/test.scss';
 
 console.log('global')
 

@@ -18,7 +18,7 @@
   "author": "UAPP",
   "license": "MIT",
   "browserslist": [
-    "cover 99.5%"
+    "defaults"
   ],
   "devDependencies": {
     "@rollup/plugin-alias": "^4.0.2",
